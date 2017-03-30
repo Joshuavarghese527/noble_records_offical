@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: postgres
+  password: password
+  host: localhost
+
+development:
+  <<: *default
+  database: noble_records_offical_development
+
+test:
+  <<: *default
+  database: noble_records_offical_test
+
+production:
+  <<: *default
+  database: noble_records_offical_production
